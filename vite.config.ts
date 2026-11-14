@@ -2,6 +2,9 @@ import adapter from '@sveltejs/adapter-auto';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
+import { loadEnv } from 'vite';
+console.log(loadEnv('development', process.cwd(), 'PUBLIC_'));
+
 export default defineConfig({
 	plugins: [
 		sveltekit({
